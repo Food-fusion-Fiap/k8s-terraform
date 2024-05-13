@@ -1,7 +1,7 @@
 resource "aws_security_group" "sg" {
   name        = "SG-${var.projectName}"
   description = "this security group was created to realize fiap tech challenge"
-  vpc_id      = var.vpcId
+  vpc_id      = local.aws_vpc_id
 
   ingress {
     description = "All"

@@ -6,18 +6,6 @@ variable "projectName" {
   default = "tech-challenge"
 }
 
-variable "subnetA" {
-  default = local.aws_private_subnet_id
-}
-
-variable "subnetB" {
-  default = local.aws_public_subnet_id
-}
-
-variable "vpcId" {
-  default = local.aws_vpc_id
-}
-
 variable "instanceType" {
   default = "t3a.medium"
 }
@@ -30,3 +18,6 @@ variable "accessConfig" {
   default = "API_AND_CONFIG_MAP"
 }
 
+variable "s3_bucket_name" {
+  default = "terraform-github-action"
+}
