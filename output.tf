@@ -1,6 +1,6 @@
-output "load_balancer_arn" {
-  description = "Load Balancer ARN"
-  value       = aws_alb.alb.arn
+output "load_balancer_dns" {
+  description = "Load Balancer DNS"
+  value       = aws_alb.alb.dns_name
 }
 
 output "ekf_cluster_endpoint" {
