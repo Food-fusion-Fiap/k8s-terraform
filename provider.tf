@@ -4,8 +4,8 @@ provider "aws" {
 
 terraform {
   backend "s3" {
-    bucket = "food-fusion-bucket"
-    key    = "terraform/terraform.tfstate"
+    bucket = "terraform-github-action"
+    key    = "prod/terraform-eks.tfstate"
     region = "us-east-1"  
   }
 }
