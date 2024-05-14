@@ -3,7 +3,7 @@ output "load_balancer_dns" {
   value       = aws_alb.alb.dns_name
 }
 
-output "ekf_cluster_endpoint" {
+output "eks_cluster_endpoint" {
   description = "EKS Cluster Endpoint"
   value       = aws_eks_cluster.eks-cluster.endpoint
 }
