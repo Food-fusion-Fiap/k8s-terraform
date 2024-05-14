@@ -45,13 +45,6 @@ resource "aws_iam_policy_attachment" "eks_vpc_policy" {
   policy_arn = "arn:aws:iam::aws:policy/AmazonEKSVPCResourceController"
 }
 
-# AmazonEKSClusterAutoScalerPolicy
-resource "aws_iam_policy_attachment" "eks_autoscaler_policy" {
-  name       = "eks_autoscaler_policy"
-  roles      = [aws_iam_role.eks_role.name]
-  policy_arn = "arn:aws:iam::aws:policy/AmazonEKSClusterAutoScalerPolicy"
-}
-
 resource "aws_iam_policy_attachment" "eks_worker_policy" {
   name       = "eks_worker_policy"
   roles      = [aws_iam_role.eks_role.name]
