@@ -43,3 +43,9 @@ resource "aws_iam_policy_attachment" "ec2_container_policy" {
   policy_arn = "arn:aws:iam::aws:policy/AmazonEC2ContainerRegistryReadOnly"
 }
 
+resource "aws_iam_policy_attachment" "eks_cni_policy" {
+  name       = "eks_cni_policy"
+  roles      = [aws_iam_role.eks_role.name]
+  policy_arn = "arn:aws:iam::aws:policy/AmazonEKS_CNI_Policy"
+
+}
